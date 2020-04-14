@@ -1,8 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Challenge: Rick and Morty episodes in which my character appears
+As a user I would like to get a list of episodes to watch based on the character I choose.
+https://rickandmortyapi.com/documentation/
+* For simplicity purposes use the Rest API
 
-## Available Scripts
+## Description
+- The character can be choose from a list or search by name.
+- Display the relevant info from the results and image of the character.
 
-In the project directory, you can run:
+#### Extra feature
+- As a user I would like to see a list of recommended characters of the same species after the first search is done
+
+#### Criteria
+- react 
+- test cases
+- UI/UX 
+
+##  Installation Scripts
+- clone or download the project
 
 ### `npm start`
 
@@ -37,32 +51,5 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
