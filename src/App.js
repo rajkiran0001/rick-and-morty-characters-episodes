@@ -10,7 +10,7 @@ function App() {
         <Link to="/">
           <h1>Home</h1>
         </Link>
-        <Search/>
+        <Search path="/"/>
       </header>
     </div>
   );
