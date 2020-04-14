@@ -1,8 +1,7 @@
 import React from "react";
 import {Link} from '@reach/router';
-
 import "./App.css";
-import Search from './components/search/Search'
+import Search from './components/search/search'
 
 function App() {
   return (

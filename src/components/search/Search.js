@@ -3,14 +3,11 @@ import '../../App.css';
 
 function Search() {
     const [query, setQuery] = useState('');
-
-
     const handleSubmit = e => {
         e.preventDefault();
         console.log("clicked");
         
     };
-
 
     return (
         <div className="results-wrapper">
