@@ -31,7 +31,7 @@ function Details(route) {
                 Species: {data.species} <span>Status: ({data.status})</span> <span>Status: ({data.gender})</span>
             </div>
             <div >
-                <i/> {data.location.name}
+                <i/> Location: {data.location.name}
             </div>
             <div >
                 <h1 className="episode">Episodes</h1>
