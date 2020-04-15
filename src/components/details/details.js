@@ -8,11 +8,9 @@ function Details(route) {
     const getCharacter = async () => {
         console.log('searching...');
         console.log('route:', route);
-
         const result = await axios(
             `https://rickandmortyapi.com/api/character/${route.id}`
         );
-
         console.log('result:', result);
         setData(result.data);
         setLoading(false);
@@ -28,12 +26,18 @@ function Details(route) {
     ) : (
         <div >
             <img alt={data.image} src={data.image} />
-            <h1>{data.name}</h1>
+            <h1 className="heading">Name: {data.name}</h1>
             <div >
-                {data.species} <span>({data.status})</span>
+                Species: {data.species} <span>Status: ({data.status})</span> <span>Status: ({data.gender})</span>
             </div>
             <div >
                 <i/> {data.location.name}
+            </div>
+            <div >
+                <h1 className="episode">Episodes</h1>
+            {data.episode.map(item => (
+                <p key={item}>{item}</p>
+            ))}
             </div>
         </div>
     );

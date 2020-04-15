@@ -1,8 +1,8 @@
 import React from "react";
 import {Router, Link} from '@reach/router';
 import "./App.css";
-import Search from './components/search/search'
-import Details from './components/details/details'
+import Search from './components/search/Search'
+import Details from './components/details/Details'
 
 function App() {
   return (

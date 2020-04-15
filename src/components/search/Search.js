@@ -17,18 +17,15 @@ function Search() {
     const searchCharacter = async () => {
         console.log('searching...');
         let queryString = '';
-        const page = 25
-
+        const page = 1
         if (search) {
             queryString = `?name=${search}`;
         } else {
             queryString = `?page=${page}`;
         }
-
         const result = await axios(
             `https://rickandmortyapi.com/api/character/${queryString}`,
         );
-
         setData(result.data);
         setLoading(false);
     };
@@ -41,13 +38,16 @@ function Search() {
     );
 
     return loading ? (
-        <p>Loading...</p>
+        <div>
+            <p>Loading...</p>
+        </div>
+
     ) : (
         <div className="results-wrapper">
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    placeholder="rick, morty, jerry, etc"
+                    placeholder="Enter your character name"
                     value={query}
                     onChange={e => setQuery(e.target.value)}
                 />
