@@ -28,10 +28,7 @@ function Details(route) {
             <img alt={data.image} src={data.image} />
             <h1 className="heading">Name: {data.name}</h1>
             <div >
-                Species: {data.species} <span>Status: ({data.status})</span> <span>Status: ({data.gender})</span>
-            </div>
-            <div >
-                <i/> Location: {data.location.name}
+                Gender: {data.gender} <span>Origin: ({data.origin.name})</span>
             </div>
             <div >
                 <h1 className="episode">Episodes</h1>
