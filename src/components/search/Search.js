@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from '@reach/router';
 import axios from 'axios';
+import Spinner from '../../Spinner';
 import '../../App.css';
 
 function Search() {
@@ -14,8 +15,8 @@ function Search() {
         setSearch(query);
     };
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const searchCharacter = async () => {
-        console.log('searching...');
         let queryString = '';
         const page = 1
         if (search) {
@@ -34,18 +35,16 @@ function Search() {
         () => {
             searchCharacter();
         },
-        [search],
+        [search, searchCharacter],
     );
 
     return loading ? (
-        <div>
-            <p>Loading...</p>
-        </div>
-
+            <Spinner />
     ) : (
         <div className="results-wrapper">
             <form onSubmit={handleSubmit}>
                 <input
+                 className="inputField"
                     type="text"
                     placeholder="Enter your character name"
                     value={query}

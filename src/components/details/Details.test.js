@@ -1,12 +1,34 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Details from "./Details";
+import Spinner from '../../Spinner';
 
-describe("App component", () => {
-  it("Loading details", () => {
-    const wrapper = shallow(<Details />);
-    const text = wrapper.find("p").text();
-    expect(text).toEqual("Loading...");
-  });
+describe("Details Page Snapshot ", () => {
+  let mountWrapper;
+  beforeEach(() => {
+      mountWrapper = mount(<Details />);
+  })
 
+  afterEach(() => {
+      mountWrapper.unmount();
+  })
+
+  it("renders Correctly", () => {
+      expect(mountWrapper).toMatchSnapshot();
+  })
+});
+
+describe("Details Page rendering of element", () => {
+  let wrapper;
+  beforeEach(() => {
+      wrapper = shallow(<Details />);
+  })
+
+  afterEach(() => {
+      wrapper.unmount();
+  })
+  
+  it("Renders one Spinner React Compount", ()=> {
+      expect(wrapper.find(Spinner).render())
+  })
 });

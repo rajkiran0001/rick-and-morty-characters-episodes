@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Product Page Snapshot  renders Correctly 1`] = `ReactWrapper {}`;
+
+exports[`Search Page Snapshot  renders Correctly 1`] = `ReactWrapper {}`;

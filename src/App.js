@@ -7,15 +7,15 @@ import Details from './components/details/Details'
 function App() {
   return (
     <div className="App">
-      <header>
-        <Link to="/">
-          <h1>Home</h1>
+      <header >
+        <Link to="/" className="background">
+          <h1 >Home</h1>
         </Link>
+      </header>
         <Router>
         <Search path="/"/>
         <Details path="details/:id"/>
         </Router>
-      </header>
     </div>
   );
 }

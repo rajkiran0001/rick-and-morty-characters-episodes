@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import Spinner from '../../Spinner';
 
 function Details(route) {
     const [data, setData] = useState({});
     const [loading, setLoading] = useState(true);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const getCharacter = async () => {
         console.log('searching...');
         console.log('route:', route);
@@ -18,11 +20,10 @@ function Details(route) {
 
     useEffect(() => {
         getCharacter();
-    }, []);
+    }, [getCharacter]);
 
     return loading ? (
-        <p>Loading...</p>
-
+        <Spinner />
     ) : (
         <div >
             <img alt={data.image} src={data.image} />
