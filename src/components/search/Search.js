@@ -52,14 +52,16 @@ function Search() {
       </form>
       <div className="results">
         <ul>
-          {data.results.slice(0, 10).map((item) => (
-            <li key={item.id}>
+          {data.results.map((item) => (
+            <li key={item.id} className="border">
               <Link to={`/details/${item.id}`}>
                 <img alt={item.name} src={item.image} />
-                <span className="name"> Name: {item.name}</span>
-                <span className="name"> Species: {item.species}</span>
-                <span className="name"> Status: {item.status}</span>
-                <span className="name"> Created: {item.created}</span>
+                <div className="align">
+                  <span className="name"> Name: {item.name}</span>
+                  <span className="name"> Species: {item.species}</span>
+                  <span className="name"> Status: {item.status}</span>
+                  <span className="name"> Created: {item.created}</span>
+                </div>
               </Link>
             </li>
           ))}

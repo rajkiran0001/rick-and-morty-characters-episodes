@@ -8,7 +8,6 @@ function Details(route) {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const getCharacter = async () => {
-    console.log("searching...");
     console.log("route:", route);
     const result = await axios(
       `https://rickandmortyapi.com/api/character/${route.id}`
@@ -25,7 +24,7 @@ function Details(route) {
   return loading ? (
     <Spinner />
   ) : (
-    <div>
+    <div className="border">
       <img alt={data.image} src={data.image} />
       <h1 className="heading">Name: {data.name}</h1>
       <div>

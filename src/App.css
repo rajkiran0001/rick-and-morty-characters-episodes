@@ -10,6 +10,22 @@
   text-decoration: none;
 }
 
+.border {
+  border-radius: 10px;
+  margin: 20px;
+  background: white;
+  align-items: center;
+  border: solid 3px black;
+  align-items: center;
+}
+
+img {
+  border-radius: 8px;
+}
+.align {
+  padding-left: 50px;
+}
+
 .inputField {
   width: 20%;
   border: 2px solid #aaa;
